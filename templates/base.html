@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AT @ Swahilibox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+</head>
+
+<body>
+
+    <header>
+        <h2><a href="{{ url_for('index') }}">AT-SWAHILIBOX WORKSHOP </a></h2>
+        <nav>
+            <li><a href="{{ url_for('sms') }}">SMS</a></li>
+            <li><a href="{{ url_for('voice') }}">VOICE</a></li>
+            <li><a href="{{ url_for('payment') }}">PAYMENTS</a></li>
+            <li><a href="{{ url_for('airtime') }}">AIRTIME</a></li>
+
+        </nav>
+    </header>
+
+    <section class="main">
+        {% block content %}
+
+        {% endblock %}
+
+    </section>
+
+</body>
+<footer>
+    <div text-align="center" text-color="blue">
+        <nav class="company">
+            
+            <a href="/about">Our story</a>
+            <!-- <a href="">Team</a> -->
+            <!-- <a href="">Careers</a> -->
+            <!-- <a href="">Press</a> -->
+            <a href="/terms">Terms of service</a>
+            <a href="/privacy">Privacy policy</a>
+            <a href="/about/#contactus">Contact us</a>
+            <a href="/careers">Careers</a>
+        </nav>
+    </div>
+</footer>
+
+</html>
